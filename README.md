@@ -1,4 +1,4 @@
-![imagen](https://github.com/rodrigoespigares/leeconBooku/assets/94736646/ddfc277c-1144-49d8-8e58-00fd46f3fce9)
+
 # Booku
 
 Con este proyecto se ha creado con para cubrir una necesidad en la sociedad ayudando a todos los usuarios a volver a leer, buscando interacciones entre usuarios, configuraciones personalizadas y contenido propio de cada usuario. Permitiendo que usuarios con permisos especificos generen examenes configurables.
@@ -37,6 +37,7 @@ Dentro del proyecto deberemos:
 
 
 ![imagen](https://github.com/rodrigoespigares/leeconBooku/assets/94736646/3a74d62b-9f1d-4efa-848b-6d95c80a0e12)
+![imagen](https://github.com/rodrigoespigares/leeconBooku/assets/94736646/ddfc277c-1144-49d8-8e58-00fd46f3fce9)
 ![imagen](https://github.com/rodrigoespigares/leeconBooku/assets/94736646/2c71eeca-1931-4a1e-894d-2c94318bd70c)
 ![imagen](https://github.com/rodrigoespigares/leeconBooku/assets/94736646/cb540a4e-71b6-41f0-8bfd-cb746a24d43e)
 ![imagen](https://github.com/rodrigoespigares/leeconBooku/assets/94736646/9b5f8761-567c-4402-a375-0361eae568b5)
