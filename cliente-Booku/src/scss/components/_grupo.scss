@@ -1,0 +1,50 @@
+.detalle_grupo{
+    gap:20rem;
+    &__izquierda{
+        
+        &--title{
+            font-size: calc(3rem + .3vw);
+            font-weight: 500;
+            color: color(primary);
+        }
+        &--info{
+            font-size: calc(1.2rem + .3vw);
+            font-weight: 500;
+            color: color(primary);
+        }
+        &__libros__content{
+            display: flex;
+            flex-direction: column;
+            width: min-content;
+            gap: 1.5rem;
+            &--img{
+                width: 6vw;
+                @include response(md){
+                    width: 10rem;
+                }
+            }
+            h2{
+                font-size: calc(1rem + .3vw);
+                color: color(primary);
+                text-align: center;
+            }
+        }
+        @include response(md){
+            text-align: center;
+        }
+    }
+    &__derecha{
+        width: 20vw;
+        &--title{
+            font-size: calc(3rem + .3vw);
+            font-weight: 500;
+            color: color(primary);
+        }
+        @include response(md){
+            width: 90%;
+        }
+    }
+    @include response(md){
+        gap:2rem;
+    }
+}

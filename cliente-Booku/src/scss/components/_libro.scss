@@ -1,0 +1,132 @@
+.detalle__libro{
+    gap: 0;
+    &__book{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        gap: 3rem;
+        &__caratula{
+            width: 30rem;
+            height: 45rem;
+        }
+        &__title{
+            font-size: calc(3rem + .3vw);
+            font-weight: 500;
+            color: color(primary);
+            text-align: center;
+        }
+    }
+    &__info{
+        width: 50%;
+        gap: 20rem;
+
+        &__data{
+            font-size: calc(1.5rem + .3vw);
+            font-weight: 500;
+            color: color(primary);
+            text-align: left;
+        }
+        &__desc{
+            font-size: calc(1rem + .3vw);
+            font-weight: 500;
+            color: color(primary);
+            text-align: left;
+        }
+    }
+}
+.detalle__libro__info{
+    @include flexposition();
+    h2{
+        font-size: calc(3rem + .3vw);
+        font-weight: 500;
+        color: color(primary);
+        text-align: center;
+    }
+    textarea{
+        resize: none;
+        height: 10vh;
+        outline: none;
+        font-size: calc(1rem + .3vw);
+        font-weight: 500;
+        color: color(primary);
+        border: .1rem solid color(primary);
+        &:focus{
+            color: color(selected);
+            border: .1rem solid color(selected);
+        }
+    }
+}
+.resenas{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 25vh;
+    overflow-y: auto;
+    &__resena{
+        color:color(secondary);
+        font-size: calc(1rem + .3vw);
+        font-weight: 500;
+        .Stars {
+            /* procentaje*/
+            --percent: calc(var(--rating) / 5 * 100%);
+            /* displau*/
+            display: inline-block;
+            /* tamaño*/
+            font-size: 3rem;
+            &::before {
+                /*Dibujo las estrellas*/
+                content: "★★★★★";
+                /*espaciado*/
+                letter-spacing: .3rem;
+                /*Degradado pintando estrellas*/
+                background: linear-gradient(90deg, color(selected) var(--percent), color(tertiary-light) var(--percent));
+                /*Clip al content*/
+                background-clip: text;
+                /*Fondo para chrome*/
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}
+
+.star-rating {
+    direction: rtl;
+    display: inline-block;
+    font-size: 0;
+    input[type="radio"] {
+        display: none;
+    }
+
+    label {
+        color: #ccc;
+        font-size: 3rem;
+        padding: 0 0.1rem;
+        cursor: pointer;
+        -webkit-transition: color 0.3s;
+        transition: color 0.3s;
+        @include response(md){
+            font-size: 2rem;
+        }
+    }
+
+    label:before {
+        content: '★';
+    }
+    input[type="radio"]:checked ~ label {
+        color: color(primary);
+    }
+    label:hover,label:hover ~ label {
+        color: color(primary);
+    }
+
+    input[type="radio"]:checked + label:hover,
+    input[type="radio"]:checked + label:hover ~ label,
+    input[type="radio"]:checked ~ label:hover,
+    input[type="radio"]:checked ~ label:hover ~ label {
+        color: color(primary);
+    }
+}
+
+
+

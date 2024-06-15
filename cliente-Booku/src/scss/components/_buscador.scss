@@ -1,0 +1,76 @@
+.buscador{
+    &--input{
+        display: flex;
+        input{
+            font-size: calc(2rem + .3vw);
+            color: white;
+            font-weight: 600;
+            outline: none;
+            border-style: solid;
+            border-bottom-left-radius: 1.6rem;
+            border-top-left-radius: 1.6rem;
+            border-width: .2rem;
+            border-color: var(--secondary);
+            padding: 1.3rem 1rem;
+            background-color: var(--primaryCeroOcho);
+            max-width: 100%;
+            @include response(md){
+                width: 70%;
+            }
+        }
+        @include response(md){
+            justify-content: center;
+        }
+        button{
+            --bs-btn-color: #fff;
+            --bs-btn-bg: $primary;
+            --bs-btn-border-color: $primary;
+            --bs-btn-hover-color: #fff;
+            --bs-btn-hover-bg: $primary;
+            --bs-btn-hover-border-color: $primary;
+            --bs-btn-focus-shadow-rgb: 49, 132, 253;
+            --bs-btn-active-color: #fff;
+            --bs-btn-active-bg: $primary;
+            --bs-btn-active-border-color: $primary;
+            --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            --bs-btn-disabled-color: #fff;
+            --bs-btn-disabled-bg: $primary;
+            border-top-right-radius: 1.6rem;
+            border-bottom-right-radius: 1.6rem;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            font-size: calc(2rem + .3vw);
+            font-family: "M PLUS Rounded 1c", sans-serif;
+            font-weight: 600;
+            background-color: $primary;
+            &:hover, &:active{
+                background-color: $selected;
+                border-color: $selected;
+                transition: .5s;
+                }
+            &:disabled{
+                background-color: $primary;
+            }
+        }
+    }
+    &__resultado__book{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__caratula{
+            width: 15rem;
+            height: 30rem;
+        }
+        &__title{
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 100%;
+        }
+        @include response(md){
+            width: 30%;
+        }
+    }
+}

@@ -1,0 +1,183 @@
+//// HouseB&B
+//// @author Rodrigo Espigares Fernández
+
+/* @extend %border_radius*/
+%border_radius{
+    border: .1rem solid color(primary);
+    border-radius: .5rem;
+}
+
+/// Mixin para resetear las listas
+@mixin reset-list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li a{
+        @include reset-link();
+        @include enlaces(white);
+    }
+}
+
+/// Mixin para resetear los links
+@mixin reset-link{
+    text-decoration: none;
+}
+/// Mixin para hacer mediaquerys
+/// @param {number} $bp con el tamaño de la mediaquery
+
+@mixin response($bp){
+    @if($bp == xl){
+        @media (max-width:1200px) {
+            @content;
+        }
+    }
+    @if($bp == lg){
+        @media (max-width:992px) {
+            @content;
+        }
+            }
+    @if($bp == md){
+        @media (max-width:798px) {
+            @content;
+        }
+    }
+    @if($bp == xs){
+        @media (max-width:500px) {
+            @content;
+        }
+    }
+}
+
+/// Mixin para crear un bloque flex
+/// @param {string} $direction [row] 
+/// @param {string} $justify [center] 
+/// @param {string} $align [center] 
+
+@mixin flexposition($direction:row, $justify:center, $align:center){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    @include response(md){
+        flex-direction: column;
+        justify-items: $align;
+        align-content: $justify;
+    }
+}
+/// Mixin para cambiar el color de enlaces y quitar la decoración
+/// @param {color} $color [black] 
+
+@mixin enlaces($color: color(secondary)){
+    color: $color;
+    text-decoration: none;
+}
+
+/// Mixin para crear un bloque grid
+/// @param {number} $column [8] 
+/// @param {number} $row [6] 
+/// @param {size} $gap [1.6rem] 
+/// @param {size} $margen [6rem] 
+/// @param {size} $colum-size [16rem] 
+
+@mixin creagrid( $column: 8, $row: 6, $gap: 1.6rem, $margen:6rem,$colum-size: 16rem){
+    display: grid;
+    grid-template-columns: minmax($margen,1fr) repeat($column,minmax(min-content,$colum-size)) minmax($margen,1fr);
+    grid-template-rows: repeat($row,max-content);
+    grid-row-gap: $gap;
+    @include response(md){
+        grid-template-columns: repeat($column,minmax(min-content,$colum-size))
+    }
+}
+/// Mixin para crear un menu resposivo
+@mixin menus{
+    flex-wrap: wrap;
+    &-list{
+        @include reset-list;
+        @include flexposition(row,space-evenly);
+        @include response(md){
+            @include flexposition(column,center, center);
+        }
+    }
+    &-link{
+        @include enlaces;
+        &:hover{
+            color: color(quaternary);
+        }
+    }
+}
+/// Mixin para crear un bloque grid responsivo
+/// @param {size} $mincolumn [30rem] 
+/// @param {size} $maxcolumn [1fr] 
+/// @param {size} $gap [1rem] 
+
+@mixin gridResponsive($mincolumn:30rem, $maxcolumn:1fr, $gap:1rem){
+    display: grid;
+    grid-gap: $gap;
+    grid-template-columns: repeat(auto-fill, minmax($mincolumn, $maxcolumn) ) ;
+    @include response(md){
+        grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr) ) ;
+    }
+}
+
+/// Mixin para generar un color rgb aleatorio
+@function generaColor(){
+    @return rgb(random(255),random(255),random(255));
+}
+
+/// Mixin para cambiar el fondo a un conjunto de bloques 
+/// @param {number} $items [6] número de bloques
+
+@mixin backgroundAleatorio($items: 6){
+    @for $i from 1 through $items{
+        &:nth-child(#{$i}) {
+              background-color: generaColor();            
+        }
+    }
+}
+/// Mixin para crear una clase con un ancho definido
+/// @param {number} $valor 
+/// @example {.w-#{$valor}{width [percentage($valor/100]}
+
+@mixin w-($valor) {
+    .w-#{$valor} {
+        width: percentage($valor/100);
+    }
+}
+
+@mixin h-($valor) {
+    .h-#{$valor} {
+        height: percentage($valor/100);
+    }
+}
+
+/// Mixin para crear una clase con un tamaño de fuente definida
+/// @param {*} $num 
+///  @example .fs-1{font-size: 5rem}
+
+@mixin fs($num){
+    .fs-#{$num}{
+        @if($num == 1){
+            font-size: 5rem;
+        }
+        @if($num == 2){
+            font-size: 4rem;
+        }
+        @if($num == 3){
+            font-size: 3rem;
+        }
+        @if($num == 4){
+            font-size: 2rem;
+        }
+        @if($num == 5){
+            font-size: 1rem;
+        }
+    }
+}
+
+/// Función para crear un número aleatorio
+/// @param {number} $max 
+/// @return {number}
+
+@function aleatorio($max){
+    @return random(5);
+}

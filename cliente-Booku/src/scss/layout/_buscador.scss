@@ -1,0 +1,5 @@
+#buscador{
+    @include flexposition(column,center);
+    gap:3rem;
+    min-height: 70vh;
+}

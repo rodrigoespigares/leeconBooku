@@ -1,0 +1,12 @@
+#juego_estados .progress{
+    height: min-content !important;
+    border-radius: 2.5rem;
+}
+.btn-juego{
+    font-size: 10rem;
+    width: 10rem;
+}
+#juego_info h2{
+    font-weight: 600;
+    color: var(--secondary);
+}

@@ -1,0 +1,15 @@
+.configuracion{
+    background-color: #f3f3f3;
+    border-color: var(--quaternary);
+    border-width: .2rem;
+    padding: 0 0 2rem 0;
+    & h2{
+        color: var(--secondary);
+        font-weight: 600;
+        font-size: calc(3rem + .3vw);
+    }
+    .config--foto{
+        width: 20rem;
+        height: 20rem;
+    }
+}

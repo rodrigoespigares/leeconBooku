@@ -1,0 +1,31 @@
+/* Defino diferentes anchos con el mixin w creando las clases w-[num]*/
+@include w-(90);
+@include w-(80);
+@include w-(70);
+@include w-(45);
+@include w-(33);
+@include w-(30);
+@include w-(15);
+@include w-(10);
+@include w-(7);
+@include w-(5);
+@include w-(3);
+@include w-(2);
+.w-lg-25{
+    width: 25%;
+    @include response(lg){
+        width: 100%;
+    }
+}
+.w-md-50{
+    width: 50%;
+    @include response(md){
+        width: 100%;
+    }
+}
+.w-md-25{
+    width: 25%;
+    @include response(md){
+        width: 50%;
+    }
+}

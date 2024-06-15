@@ -1,0 +1,30 @@
+.tarjeta-grande{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 50vh;
+
+    padding: 0 2rem;
+    background-color: var(--primary);
+    cursor: pointer;
+    text-decoration: none;
+    p{
+        font-weight: 700;
+        font-size: calc(3rem + .3vw);
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        padding: 0 3rem;
+        
+      }
+    &:hover{
+        height: calc(50vh + 3vh);
+        background-color: var(--selected);
+        transition: .5s;
+      }
+    @include response(md){
+        width: 50%;
+        height: 50vh;
+    }
+  }

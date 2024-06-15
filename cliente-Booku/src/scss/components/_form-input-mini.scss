@@ -1,0 +1,17 @@
+.form-input-search-mini button{
+    font-size: calc(2.2rem + .3vw);
+    color: white;
+    font-weight: 600;
+    width: 10%;
+    position: absolute;
+    right: 0rem;
+    margin-top:4rem;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 1.3rem 1rem;
+    @include response(md){
+        right: 2rem;
+        margin-top:3rem;
+    }
+  }

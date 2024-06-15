@@ -1,0 +1,75 @@
+.detalle__reto{
+    width: 100%;
+    &__libros{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        width: max-content;
+        max-width: 40%;
+        gap: 3rem;
+        &__content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 10vw;
+            &--img{
+                width: 20rem;
+            }
+            h2{
+                font-size: calc(2rem + .3vw);
+                font-weight: 500;
+                color: color(primary);
+                text-align: center;
+            }
+        }
+    }
+    &__info{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        gap: 4rem;
+        &__tecnicos{
+            display: flex;
+            flex-direction: column;
+            
+            &__datos{
+                font-size: calc(2rem + .3vw);
+                font-weight: 500;
+                color: color(primary);
+                b{
+                    font-weight: 900;
+                }
+            }
+        }
+        &__amigos{
+            h2{
+                font-size: calc(2rem + 1vw);
+                font-weight: 500;
+                color: color(primary);
+            }
+            &__listado{
+                border:.2rem solid color(primary);
+                border-radius: 2.5rem;
+                height: 40vh;
+                padding: 3rem 5rem;
+                overflow-y: auto;
+                &__amigo{
+                    display: flex;
+                    align-items: center;
+                    gap: 5rem;
+                    &__foto{
+                        width: 10rem;
+                    }
+                    &__nombre{
+                        font-size: calc(1rem + 1vw);
+                        font-weight: 500;
+                        color: color(primary);
+                    }
+                }
+            }
+            
+        }
+        
+    }
+}

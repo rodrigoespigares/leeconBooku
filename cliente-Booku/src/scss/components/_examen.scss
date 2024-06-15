@@ -1,0 +1,93 @@
+.examen{
+    .icon{
+        font-size: 5rem;
+        color: color(primary);
+        &:hover,&:focus,&:active{
+            color: color(selected);
+        }
+    }
+    &--title{
+        font-size: calc(3rem + 1vw);
+        font-weight: 500;
+        color: color(primary);
+        span{
+            text-transform: capitalize;
+        }
+    }
+    &__pregunta__vacia{
+        @include flexposition(column);
+        border: .2rem solid color(primary);
+        border-radius: 2rem;
+        padding: 2rem 5rem;
+        width: 50%;
+        input{
+            border: none;
+            outline: none;
+            color: color(primary);
+            text-align: center;
+            &:focus{
+                border-bottom: .1rem solid color(primary);
+            }
+        }
+        &--pregunta{
+            font-size: calc(2rem + .5vw);
+            font-weight: 500;
+            width: 100%;
+        }
+        &--opcion{
+            font-size: calc(1.5rem + .3vw);
+            font-weight: 500;
+            width: min-content;
+            @include response(md){
+                width: 100%;
+            }
+        }
+    }
+}
+
+.menu__examen{
+    @include flexposition(column,baseline);
+    flex-wrap: wrap;
+    background-color: color(secondary);
+    border:.1rem solid color(secondary);
+    border-radius: 2rem;
+    padding: 1rem;
+    gap: 2rem;
+    &--item{
+        background-color: color(primary);
+        border:.1rem solid color(primary);
+        border-radius: 2rem;
+        width: 5rem;
+        height: 5rem;
+        text-align: center;
+        font-size: 3rem;
+        text-decoration: none;
+        color: white;
+        &:hover,&:focus,&:active{
+            background-color: color(selected);
+            border:.1rem solid color(selected);
+        }
+    }
+    &__controladores{
+        gap: 2rem;
+        &--item{
+            background-color: color(primary);
+            border:.1rem solid color(primary);
+            border-radius: 2rem;
+            width: 5rem;
+            height: 5rem;
+            text-align: center;
+            font-size: 3rem;
+            text-decoration: none;
+            color: white;
+            &:hover,&:focus{
+                background-color: color(selected);
+                border:.1rem solid color(selected);
+            }
+        }
+    }
+    &__preguntas{
+        max-height: 47.2rem;
+        gap: 1.2rem;
+    }
+}

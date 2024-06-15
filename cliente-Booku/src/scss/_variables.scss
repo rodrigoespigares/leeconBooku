@@ -1,0 +1,65 @@
+/// Colores principales de la web
+/// @group colores
+$colors: (
+    primary:#668DC0,
+    primary-oscuro:#668dc0cc,
+    primary-claro:#839ec0,
+    secondary:#304A6E, 
+    secondary-800:#304a6e99, 
+    secondary-claro:#C0D0EF,
+    tertiary:#C2C6CE,
+    tertiary-dark: #9a9ea5,
+    tertiary-light: #ccc,
+    quaternary:#0F1C30,
+    selected: #AE445A,
+    selected-800: #ae4459cc,
+    menu-1:#B05252,
+    menu-2:#76B052,
+    menu-3:#526DB0,
+    menu-4:#B052A7,
+    menu-5:#52B07E,
+
+);
+/// Función para devolver un color declarado en el mapa
+/// @param {string} $color 
+/// @return {color} color - en hexadecimal
+/// @group colores
+
+@function color($color){
+    @return map-get($colors,$color);
+}
+
+/// Anchuras principales de la web
+/// @group anchura
+$font-weights:(
+    "light":200,
+    "regular": 400,
+    "bold":700
+);
+
+/// Función para devolver anchuras declaradas en el mapa
+/// @param {string} $weigth 
+/// @return {ancho} anchura de letra
+/// @group anchura
+@function width($wigth){
+    @return map-get($font-weights,$wigth);
+}
+
+/// Tamaños principales de la web
+/// @group tamaños
+$font-sizes:(
+    xxl:6rem,
+    xl:3rem,
+    lg:2.5rem,
+    md:2rem,
+    sm:1.8rem,
+    xs:1.6rem
+);
+
+/// Función para devolver el tamaño declarado en el mapa
+/// @param {size} $size 
+/// @return {tamaño} devuelve el tamaño del mapa
+/// @group tamaños
+@function size($size){
+    @return map-get($font-sizes,$size);
+}

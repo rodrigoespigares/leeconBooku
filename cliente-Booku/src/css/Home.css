@@ -1,0 +1,102 @@
+.home-cubos {
+  border: .1rem solid #eee;
+  box-shadow: 1rem 0 1rem var(--tertiary-light);
+  overflow-y: auto;
+  width: 100%;
+}
+.home-cubos-bloque{
+  border: .1rem solid #eee;
+  box-shadow: 1rem 0 1rem var(--tertiary-light);
+  overflow-y: auto;
+  width: 100%;
+}
+
+.home-cubos-centro{
+  width: 100%;
+}
+.home-cubos-booku {
+  width: 50%;
+}
+
+@media (min-width: 576px) {
+  .home-cubos {
+    width: 75%;
+  }
+  .home-cubos-centro{
+    width: 75%;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-cubos {
+    width: 25%;
+  }
+  .home-cubos-centro{
+    width: 25%;
+  }
+}
+
+
+.lista_amigos {
+  height: 50vh;
+  overflow-x: auto;
+}
+.lista_amigos h2{
+  color: var(--secondary);
+  font-weight: 600;
+  font-size: calc(3rem + .3vw);
+}
+.lista_amigos a{
+  text-decoration: none;
+}
+
+.foto-perfil {
+  width: 10rem;
+  height: 10rem;
+}
+.foto-perfil img{
+  width: 100%;
+  height: 100%;
+}
+
+.reto_show_more{
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--secondary);
+  text-decoration: none;
+  width: 100;
+  text-align: center;
+}
+.reto_show_more:hover, .reto_show_more:focus, .reto_show_more:active{
+  font-weight: 900;
+  color: var(--selected);
+}
+.lista_amigos p{
+  max-width: 100%;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  white-space: nowrap;
+}
+.btn-carrousel{
+  width: min-content !important;
+  margin: 0 1vw;
+}
+
+.ranking__book__title{
+  width: 15rem;
+  height: 3rem;
+  overflow: hidden;
+  text-align: center;
+  font-size: calc(0.3rem + .3vw);
+}
+.ranking__book__home__a{
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: calc(1rem + 0.3vw);
+}
+.ranking__book__home__a:hover, .ranking__book__home__a:active, .ranking__book__home__a:focus{
+  font-weight: 700;
+  color: var(--selected);
+  transition: .5s;
+}

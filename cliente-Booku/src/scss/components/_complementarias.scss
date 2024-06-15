@@ -1,0 +1,27 @@
+.complementarias{
+    @include flexposition(column,baseline);
+    padding: 3rem 0;
+    color: color(primary);
+    
+    h2{
+        font-size: calc(3rem + .3vw);
+        font-weight: 800;
+    }
+    h3{
+        font-size: calc(2rem + .3vw);
+        font-weight: 800;
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        li{
+            font-size: calc(1rem + .3vw);
+            width: 70%;
+        }
+    }
+    p{
+        font-size: calc(1rem + .3vw);
+        max-width: 70%;
+    }
+}

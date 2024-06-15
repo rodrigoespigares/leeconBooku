@@ -1,0 +1,77 @@
+#login{
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--quaternary);
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 120rem;
+}
+#login .display-2{
+    font-weight: 600;
+    color: var(--tertiary);
+}
+#login .btn{
+    color: var(--tertiary);
+    font-weight: 600;
+    font-size: calc(2rem + .3vw);
+}
+#login .btn-primary-superior{
+    font-size: 1.6rem;
+    color: var(--secondary-light);
+}
+.login-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.login-bottom p{
+    color: var(--tertiary);
+    font-size: calc(1rem + .1vw);
+    font-weight: 600;
+}
+.login-bottom--text{
+    color: var(--tertiary);
+    font-size: calc(1.2rem + .3vw);
+    font-weight: 600;
+}
+.line{
+    background-color: var(--tertiary);
+    width: 20vw;
+    height: .2rem;
+    max-width: 60rem;
+}
+.login-bottom--buttons{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 80rem;
+}
+.login-extra{
+    color: var(--tertiary);
+    text-transform: uppercase;
+}
+.login-extra h4{
+    font-size: calc(1.5rem + .3vw);
+    font-weight: 600
+}
+.login-extra h4 a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+.login-err{
+    margin-top: 2rem;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+}
+.login-err p {
+    font-size: calc(2rem + .3vw);
+}

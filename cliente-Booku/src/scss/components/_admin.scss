@@ -1,0 +1,45 @@
+.admin{
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    &__btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 60vh;
+        width: 30rem;
+        background-color: color(secondary);
+        border: none;
+        
+        outline: none;
+        color: white;
+        padding: 0 3rem;
+        &:hover, &:active, &:focus{
+            background-color: color(selected);
+            height: 65vh;
+            transition: .4s;
+        }
+        &--icon{
+            font-size: 15rem;
+        }
+        &--title{
+            width: min-content;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: calc(2rem + .3vw);
+        }
+    }
+    @include response(xl){
+        height: auto;
+        padding: 2rem 0;
+    }
+}
+
+
+.top-40{
+    top: 40%;
+}

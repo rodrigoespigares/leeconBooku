@@ -1,0 +1,92 @@
+#hero{
+    width: 100%;
+    height: 90vh;
+}
+#hero .content{
+    padding: 2rem;
+}
+#hero .content h1{
+    font-weight: 300;
+    font-size: 5rem;
+    color:var(--primary);
+}
+#hero .fade__title{
+    background-color: var(--tertiary);
+    color: white;
+    border-radius: 3rem;
+    font-weight: 900;
+    font-size: 3rem;
+    text-decoration: none;
+    padding: .1rem 2rem;
+}
+#hero .fade__title:hover, #hero .fade__title:active{
+    background-color: var(--tertiary-dark);
+    box-shadow: -10px 10px 10px var(--tertiary);
+    transition: .3s ease-in-out;
+}
+#hero .picture{
+    width: 30%;
+    position: relative;
+}
+#hero .picture img{
+    width: 100%;
+}
+
+#ranking{
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding-bottom: 4rem;
+}
+#ranking h2{
+    color: white;
+}
+.ranking__book{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ranking__book__img{
+    height: 20rem;
+    width: 14rem;
+}
+.ranking__book__h3{
+    color: white;
+}
+.ranking__book__a{
+    font-weight: 700;
+    font-size: 2rem;
+    color: #AE445A;
+    text-decoration: none;
+}
+.ranking__book__a:hover, .ranking__book__a:active{
+    font-weight: 900;
+    color: white;
+    transition: .2s;
+}
+
+#explain{
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem
+}
+.explain__section{
+    width: 50%;
+    gap: 3rem;
+}
+.explain__section:nth-child(even){
+    flex-direction: row-reverse;
+}
+.explain__section--content h3{
+    font-size: calc(3rem + .3vw);
+}
+.explain__section--content p{
+    font-size: calc(1.6rem + .3vw);;
+}
+.explain__section--img {
+    max-width: 25vh;
+}
+.explain__section--img img{
+    width: 100%;
+}

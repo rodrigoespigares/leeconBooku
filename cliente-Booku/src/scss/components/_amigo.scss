@@ -1,0 +1,24 @@
+.retos{
+    width: 20vw;
+    min-height: 20vh;
+    h2{
+        font-size: calc(3rem + .3vw);
+        font-weight: 500;
+        color: color(primary);
+        text-align: center;
+    }
+    &_reto{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            font-size: calc(1rem + .3vw);
+            font-weight: 500;
+            color: color(primary);
+            text-align: center;
+        }
+    }
+    @include response(md){
+        width: 100%;
+    }
+}

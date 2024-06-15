@@ -1,0 +1,11 @@
+.detalle{
+    @include flexposition();
+    padding-top: 4rem;
+    gap: 15rem;
+    &__foto{
+        width: 10rem;
+    }
+    @include response(md){
+        gap: 5rem;
+    }
+}

@@ -1,0 +1,13 @@
+.examen{
+    @include flexposition(column,baseline);
+    gap: 2rem;
+    article{
+        scroll-margin-top: 30rem;
+    }
+}
+.menu__examen {
+    position: fixed;
+    right: 1rem;      
+    max-height: 60vh;
+    overflow-y: auto;
+}

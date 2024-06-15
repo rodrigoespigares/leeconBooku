@@ -1,0 +1,27 @@
+#error{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+#error .error{
+    font-size: 20rem;
+    font-weight: 700;
+    color:  var(--quaternary);
+}
+#error p:nth-child(2){
+    font-size: 2rem;
+}
+#error p:nth-child(2) span{
+    color:  var(--quaternary)
+}
+#error .link{
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight:500;
+    color: var(--selected);
+}
+#error .link:hover,#error .link:active{
+    font-weight: 700;
+}

@@ -1,0 +1,47 @@
+/* CARGA DE PLANTILLA PROPIA */
+@import '../css/Landing.css';
+@import '../css/Error.css';
+@import '../css/Game.css';
+@import '../css/Tienda.css';
+@import '../css/Almacen.css';
+@import '../css/Home.css';
+@import '../css/Login.css';
+@import '../css/Loading.css';
+@import '../css/Configuracion.css';
+@import '../css/Static.css';
+
+@import './variables';
+@import './mixin';
+
+@import './layout/detalle';
+@import './layout/examen';
+@import './layout/buscador';
+
+@import './bootstrap/base';
+@import './bootstrap/alerts';
+
+
+
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import './bootstrap/button';
+
+@import './base';
+@import './components/width';
+@import './components/height';
+@import './components/retos';
+@import './components/reto';
+@import './components/libro';
+@import './components/amigo';
+@import './components/grupo';
+@import './components/examen';
+@import './components/admin';
+@import './components/table_responsive';
+@import './components/historial';
+@import './components/buscador';
+@import './components/tarjeta';
+@import './components/menu_stats';
+@import './components/form-input-mini';
+@import './components/complementarias';
+
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';

@@ -1,0 +1,73 @@
+.form-two-input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__label{
+        font-size: calc(2rem + .3vw);
+        font-weight: 500;
+        color: color(primary);
+    }
+    .form-value{
+        display: flex;
+        gap: 3rem;
+        
+        &__duracion{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            input{
+                width: 15rem;
+                height: 15rem;
+                font-size: 10rem;
+                font-weight: 500;
+                color: white;
+                text-align: center;
+                outline: none;
+                border: .1rem solid color(primary);
+                border-radius: 1rem;
+                background-color: color(secondary-800);
+                
+            }
+        }
+        &__tipo{
+            display: flex;
+            flex-direction: column;
+            gap: .2rem;
+            font-size: 3.1rem;
+            font-weight: 500;
+            color: white;
+            justify-content: end;
+            label{
+                border: .1rem solid color(primary);
+                border-radius: 1rem;
+                background-color: color(secondary-800);
+                padding: 0 2rem;
+                text-align: center;
+                cursor: pointer;
+                &:hover, &:focus{
+                    background-color: color(selected-800);
+                    border-color: color(selected);
+                }
+            }
+            input[type="radio"]:checked + label{
+                background-color: color(selected-800);
+                border-color: color(selected);
+            }
+    
+        }
+        @include response(md){
+            flex-direction: column;
+        }
+    }
+}
+.form-search{
+    background-color: color(secondary-800);
+    width: min-content;
+    border: none;
+    outline: none;
+    padding: .2rem 1rem;
+    border-radius: 2rem;
+    color: white;
+    font-size: calc(2rem + .2vw);
+}
