@@ -33,6 +33,14 @@ Dentro del proyecto deberemos:
   npm install
   npm run dev
 ```
+
+Y para el servidor deberemos volver a la carpeta raiz y colocar los siguientes comandos:
+```bash
+  cd api-booku
+  composer update
+  php artisan serve
+```
+
 ## Galería de imágenes
 
 
