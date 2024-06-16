@@ -62,7 +62,7 @@ export default function Landing() {
                             <div key={book.id} className='ranking__book'>
                                 <img className='ranking__book__img' src={book.volumeInfo.imageLinks == undefined ? libro : book.volumeInfo.imageLinks.thumbnail} alt="" />
                                 <h3 className='display-6 ranking__book__h3'>{book.volumeInfo.title}</h3>
-                                <Link to={"/detalle/libro/"+book.id} className='ranking__book__a'>Ver más <Icon icon="mingcute:right-line" /></Link>
+                                <Link to={usuario?("/detalle/libro/"+book.id):"/inicio-sesion"} className='ranking__book__a'>Ver más <Icon icon="mingcute:right-line" /></Link>
                             </div>
                         ))
                     }
