@@ -348,7 +348,7 @@ export default function Static() {
                     <section className="div-emergente-body">
                         <div className='d-flex flex-column w-100 border-bottom pb-3'>
                             {grupos.length == 0? (
-                                <p>No hay grupos</p>
+                                <p className='fs-3 text-center'>No hay grupos</p>
                             ) : grupos.map((grupo) => (
                                 <Link to={"/detalle/grupo/"+grupo.id} onClick={toggleGrupos} className='btn pt-3 pb-1 fs-3' key={grupo.id}>{grupo.nombre}</Link>
                             ))}
@@ -371,7 +371,7 @@ export default function Static() {
                         <h2>Notificaciones</h2>
                     </section>
                     <section className="div-emergente-body">
-                        {amigos.map((e) => (
+                        {amigos.length == 0?( <p className='fs-3 text-center'>No hay notificaciones</p>):(amigos.map((e) => (
                             <div key={e.user_id} className='d-flex align-items-center gap-2 w-100'>
                                 <div className='w-25'>
                                     <img className='w-100' src={e.foto} alt={"Foto de " + e.user_name} />
@@ -386,7 +386,7 @@ export default function Static() {
                                     }} className='text-success btn p-0'><Icon className='fs-1' icon="dashicons:yes" /></button>
                                 </div>
                             </div>
-                        ))}
+                        )))}
                     </section>
                 </div>
             )}
