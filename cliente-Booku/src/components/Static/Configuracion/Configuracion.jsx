@@ -15,7 +15,7 @@ export default function Configuracion(props) {
         }
     }, [props.juego]);
     useEffect(() => {
-        if (props.config) {
+        if (props.config && nombre == "") {
             setNombre(props.config.user_name || '');
             setFoto(props.config.foto || '');
         }
@@ -58,7 +58,9 @@ export default function Configuracion(props) {
         }
         if(n_booku != props.juego.nombre){
             let juegoDoc = doc(db, 'juego', props.config.user_id);
-            updateDoc(juegoDoc, { nombre: n_booku });
+            updateDoc(juegoDoc, { nombre: n_booku }).then(() => {
+                props.onGuardado()
+            });
         }
         if(nombre != props.config.user_name){
             let configCollection = collection(db, 'config');
