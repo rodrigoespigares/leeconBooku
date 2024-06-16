@@ -12969,8 +12969,8 @@ textarea.form-control-lg {
 }
 .detalle__reto__libros {
   display: flex;
-  flex-wrap: wrap;
   justify-content: end;
+  flex-wrap: wrap;
   width: max-content;
   max-width: 40%;
   gap: 3rem;
@@ -12989,6 +12989,13 @@ textarea.form-control-lg {
   font-weight: 500;
   color: #668DC0;
   text-align: center;
+}
+@media (max-width: 798px) {
+  .detalle__reto__libros {
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+  }
 }
 .detalle__reto__info {
   width: 20%;

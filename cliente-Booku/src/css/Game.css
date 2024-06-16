@@ -10,3 +10,7 @@
     font-weight: 600;
     color: var(--secondary);
 }
+#juego_estados_info .progress{
+    height: calc(3rem + .5vw) !important;
+    border-radius: 2.5rem;
+}

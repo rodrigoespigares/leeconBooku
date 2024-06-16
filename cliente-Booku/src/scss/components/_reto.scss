@@ -2,8 +2,8 @@
     width: 100%;
     &__libros{
         display: flex;
-        flex-wrap: wrap;
         justify-content: end;
+        flex-wrap: wrap;
         width: max-content;
         max-width: 40%;
         gap: 3rem;
@@ -21,6 +21,11 @@
                 color: color(primary);
                 text-align: center;
             }
+        }
+        @include response(md){
+            flex-direction: column;
+            justify-content: baseline;
+            align-items: center;
         }
     }
     &__info{

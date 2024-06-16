@@ -130,9 +130,9 @@ export default function Game() {
                     </div>
                     <h2 className='display-2 mt-5'>{infoBooku.nombre}</h2>
                 </section>
-                <section id="juego_estados" className='h-100 w-50 d-flex flex-column justify-content-center'>
+                <section className='h-100 w-md-50 d-flex flex-column justify-content-baseline '>
                     {infoBooku && Object.keys(infoBooku).length !== 0 && (
-                        <article className='h-25 w-md-50 d-flex flex-column justify-content-evenly'>
+                        <article id='juego_estados_info' className='h-25 w-md-50 d-flex flex-column justify-content-evenly'>
                             <div className="progress">
                                 <label className='fs-1' htmlFor="">❤️</label>
                                 <div
@@ -153,11 +153,11 @@ export default function Game() {
                             </div>
                         </article>
                     )}
-                    <article className='d-flex h-50 w-md-50 align-items-center justify-content-evenly gap-3'>
+                    <article className='d-flex w-md-50 align-items-center justify-content-evenly gap-3 bg-danger'>
                         <button onClick={toggleAlmacen} className='btn btn-primary d-flex flex-column'><Icon className='btn-juego p-4' icon="streamline:refrigerator-solid" /> {sumarCantidades()} 🍔</button>
                         <button onClick={toggleTienda} className='btn btn-primary d-flex flex-column'><Icon className='btn-juego p-4' icon="bi:shop" />{config.monedas} 🪙</button>
                     </article>
-                </section>
+                </section>         
             </div>
 
             <div className={`modal fade justify-content-center align-items-baseline mt-5 pt-5 ${mostrarTienda ? 'show' : ''}`} id="recompensas" style={{ display: mostrarTienda ? 'flex' : 'none' }} onClick={(event) => { event.stopPropagation(); toggleTienda() }}>
