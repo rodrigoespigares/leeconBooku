@@ -358,7 +358,7 @@ export default function Reto(props) {
                 />
             )}
             {modalAddReto && (
-                <div className={`modal fade justify-content-center align-items-baseline align-items-md-center ${modalAddReto ? 'show' : ''}`} style={{ display: modalAddReto ? 'flex' : 'none' }} onClick={() => {setModalAddReto(false)}}>
+                <div className={`modal fade justify-content-center align-items-baseline ${modalAddReto ? 'show' : ''}`} style={{ display: modalAddReto ? 'flex' : 'none' }} onClick={() => {setModalAddReto(false)}}>
                     <div className="modal-content w-md-50 overflow-y-auto" onClick={e => e.stopPropagation()}>
                         <div className="modal-body">
                             <div>
