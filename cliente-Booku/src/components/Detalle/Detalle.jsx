@@ -785,7 +785,7 @@ export default function Detalle() {
             </section>
 
             {configGrupo==1 && (
-                <div className={`modal fade justify-content-center align-items-center ${configGrupo != 0 ? 'show' : ''}`} style={{ display: configGrupo != 0 ? 'flex' : 'none' }} onClick={() => { setConfigGrupo(!configGrupo) }}>
+                <div className={`modal fade justify-content-center align-items-baseline ${configGrupo != 0 ? 'show' : ''}`} style={{ display: configGrupo != 0 ? 'flex' : 'none' }} onClick={() => { setConfigGrupo(!configGrupo) }}>
                     <div className="grupos modal-content w-md-50">
                         <div className="modal-body" onClick={(event) => event.stopPropagation()}>
                             <div>
@@ -815,7 +815,7 @@ export default function Detalle() {
             
 
             {grupo.examen_id && (
-                <div className={`modal fade justify-content-center align-items-center ${verNotas != 0 ? 'show' : ''}`} style={{ display: verNotas != 0 ? 'flex' : 'none' }} onClick={() => { setVerNotas(!verNotas) }}>
+                <div className={`modal fade justify-content-center align-items-baseline ${verNotas != 0 ? 'show' : ''}`} style={{ display: verNotas != 0 ? 'flex' : 'none' }} onClick={() => { setVerNotas(!verNotas) }}>
                     <div className="grupos modal-content w-md-50">
                         <div className="modal-body" onClick={(event) => event.stopPropagation()}>
                             <div>
