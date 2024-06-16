@@ -153,7 +153,7 @@ export default function Game() {
                             </div>
                         </article>
                     )}
-                    <article className='d-flex w-md-50 align-items-center justify-content-evenly gap-3 bg-danger'>
+                    <article className='d-flex w-md-50 align-items-center justify-content-evenly gap-3'>
                         <button onClick={toggleAlmacen} className='btn btn-primary d-flex flex-column'><Icon className='btn-juego p-4' icon="streamline:refrigerator-solid" /> {sumarCantidades()} 🍔</button>
                         <button onClick={toggleTienda} className='btn btn-primary d-flex flex-column'><Icon className='btn-juego p-4' icon="bi:shop" />{config.monedas} 🪙</button>
                     </article>
