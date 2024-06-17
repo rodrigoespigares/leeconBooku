@@ -41,6 +41,8 @@ Y para el servidor deberemos volver a la carpeta raiz y colocar los siguientes c
   php artisan serve
 ```
 
+Una vez ejecutado podremos acceder como administrador con el usuario admin@administrador.com y la contraseña administrador
+
 ## Galería de imágenes
 
 
